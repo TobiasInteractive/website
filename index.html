@@ -1,177 +1,696 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lifaro – Dein Leben. Einfach organisiert.</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lifaro – Dein Leben. Einfach organisiert.</title>
+  <meta
+    name="description"
+    content="Lifaro verbindet Kalender, Einkauf, Familie, Notizen und Gesundheit in einer App."
+  />
+  <style>
+    :root {
+      --bg: #f6efea;
+      --bg-soft: #fbf7f4;
+      --card: rgba(255, 255, 255, 0.72);
+      --text: #2f2521;
+      --muted: #7d6a61;
+      --primary: #9b6f5a;
+      --primary-dark: #7f5846;
+      --line: rgba(120, 92, 78, 0.14);
+      --shadow: 0 20px 50px rgba(92, 63, 49, 0.12);
+      --radius-xl: 28px;
+      --radius-lg: 22px;
+      --radius-md: 16px;
+      --max: 1180px;
+    }
 
-<style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f4ece8;
-    color: #2f2521;
-}
+    * {
+      box-sizing: border-box;
+    }
 
-.container {
-    max-width: 1100px;
-    margin: auto;
-    padding: 20px;
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
-/* NAV */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-}
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(210, 187, 174, 0.35), transparent 28%),
+        radial-gradient(circle at top right, rgba(217, 201, 230, 0.28), transparent 24%),
+        linear-gradient(180deg, #f8f2ee 0%, #f5ede8 100%);
+    }
 
-.logo {
-    font-weight: bold;
-    font-size: 20px;
-    color: #7d533f;
-}
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-nav a {
-    margin-left: 15px;
-    text-decoration: none;
-    color: #7f665d;
-    font-weight: 600;
-}
+    .container {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+    }
 
-/* HERO */
-.hero {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    align-items: center;
-    padding: 40px 20px;
-}
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      backdrop-filter: blur(14px);
+      background: rgba(248, 242, 238, 0.82);
+      border-bottom: 1px solid rgba(120, 92, 78, 0.08);
+    }
 
-.hero-text {
-    flex: 1;
-}
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      min-height: 76px;
+    }
 
-.hero-text h1 {
-    font-size: 40px;
-    margin-bottom: 10px;
-}
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+      font-size: 22px;
+      color: var(--primary-dark);
+      letter-spacing: 0.2px;
+    }
 
-.hero-text p {
-    color: #7f665d;
-    font-size: 18px;
-}
+    .brand-badge {
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, #bb8d77, #8b6251);
+      color: white;
+      box-shadow: 0 8px 18px rgba(128, 88, 69, 0.2);
+      font-size: 19px;
+    }
 
-.play-btn {
-    display: inline-block;
-    margin-top: 20px;
-}
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
 
-.play-btn img {
-    height: 60px;
-}
+    .nav-links a {
+      color: var(--muted);
+      font-size: 15px;
+      font-weight: 600;
+    }
 
-/* FEATURES */
-.features {
-    margin-top: 40px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
+    .nav-links a:hover {
+      color: var(--primary-dark);
+    }
 
-.card {
-    background: #f6f1f7;
-    padding: 20px;
-    border-radius: 16px;
-    border: 1px solid #ddd;
-}
+    .hero-wrap {
+      padding: 42px 0 26px;
+    }
 
-.card h3 {
-    margin-top: 0;
-}
+    .hero {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 42px;
+      align-items: center;
+      background: linear-gradient(135deg, rgba(255,255,255,0.72), rgba(255,255,255,0.48));
+      border: 1px solid rgba(120, 92, 78, 0.08);
+      border-radius: 34px;
+      padding: 52px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      position: relative;
+    }
 
-/* FOOTER */
-footer {
-    margin-top: 50px;
-    padding: 20px;
-    text-align: center;
-    font-size: 14px;
-    color: #7f665d;
-}
-</style>
+    .hero::before {
+      content: "";
+      position: absolute;
+      right: -80px;
+      top: -80px;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(208, 182, 171, 0.34), transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      left: -60px;
+      bottom: -70px;
+      width: 240px;
+      height: 240px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(215, 198, 230, 0.28), transparent 70%);
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(155, 111, 90, 0.1);
+      color: var(--primary-dark);
+      border: 1px solid rgba(155, 111, 90, 0.15);
+      padding: 9px 14px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      margin: 0 0 16px;
+      font-size: clamp(38px, 6vw, 64px);
+      line-height: 0.96;
+      letter-spacing: -1.3px;
+      max-width: 640px;
+    }
+
+    .hero-text p {
+      margin: 0;
+      max-width: 590px;
+      color: var(--muted);
+      font-size: 19px;
+      line-height: 1.6;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-top: 28px;
+      flex-wrap: wrap;
+    }
+
+    .play-btn {
+      display: inline-flex;
+      align-items: center;
+      transition: transform 0.18s ease;
+    }
+
+    .play-btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .play-btn img {
+      height: 62px;
+      display: block;
+    }
+
+    .hero-note {
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .hero-points {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .hero-points span {
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid rgba(120, 92, 78, 0.1);
+      color: var(--text);
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .phone-zone {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      min-height: 560px;
+    }
+
+    .phone-glow {
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(173, 140, 124, 0.22), transparent 68%);
+      filter: blur(6px);
+    }
+
+    .phone-shadow {
+      position: absolute;
+      bottom: 12px;
+      width: 270px;
+      height: 46px;
+      background: rgba(58, 37, 28, 0.12);
+      filter: blur(18px);
+      border-radius: 50%;
+    }
+
+    .phone-frame {
+      position: relative;
+      width: 300px;
+      height: 610px;
+      border-radius: 42px;
+      padding: 12px;
+      background: linear-gradient(145deg, #1f1b19, #0f0d0d);
+      box-shadow:
+        0 26px 70px rgba(40, 26, 20, 0.28),
+        inset 0 1px 0 rgba(255,255,255,0.08);
+    }
+
+    .phone-screen {
+      width: 100%;
+      height: 100%;
+      border-radius: 32px;
+      overflow: hidden;
+      background: #efe5de;
+      position: relative;
+    }
+
+    .phone-notch {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 126px;
+      height: 24px;
+      border-radius: 999px;
+      background: rgba(15, 13, 13, 0.96);
+      z-index: 4;
+    }
+
+    .phone-screen img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .floating-card {
+      position: absolute;
+      right: -18px;
+      top: 72px;
+      background: rgba(255,255,255,0.9);
+      border: 1px solid rgba(120, 92, 78, 0.1);
+      border-radius: 18px;
+      padding: 14px 16px;
+      box-shadow: 0 18px 32px rgba(76, 52, 42, 0.14);
+      max-width: 190px;
+      backdrop-filter: blur(10px);
+    }
+
+    .floating-card strong {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+
+    .floating-card span {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .floating-mini {
+      position: absolute;
+      left: -16px;
+      bottom: 92px;
+      background: rgba(255,255,255,0.92);
+      border: 1px solid rgba(120, 92, 78, 0.1);
+      border-radius: 18px;
+      padding: 12px 14px;
+      box-shadow: 0 16px 28px rgba(76, 52, 42, 0.12);
+      font-size: 13px;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .section {
+      padding: 26px 0 18px;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .section-head h2 {
+      margin: 0;
+      font-size: 33px;
+      letter-spacing: -0.6px;
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 620px;
+      line-height: 1.6;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+    }
+
+    .feature-card {
+      background: var(--card);
+      backdrop-filter: blur(14px);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      padding: 22px;
+      box-shadow: 0 12px 28px rgba(88, 61, 50, 0.06);
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 34px rgba(88, 61, 50, 0.1);
+    }
+
+    .feature-icon {
+      font-size: 24px;
+      margin-bottom: 12px;
+      display: inline-block;
+    }
+
+    .feature-card h3 {
+      margin: 0 0 10px;
+      font-size: 24px;
+    }
+
+    .feature-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.55;
+      font-size: 15px;
+    }
+
+    .cta-block {
+      margin: 30px 0 8px;
+      background: linear-gradient(135deg, #9b6f5a, #7f5846);
+      color: white;
+      border-radius: 30px;
+      padding: 34px;
+      box-shadow: 0 22px 50px rgba(104, 69, 53, 0.22);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .cta-block h3 {
+      margin: 0 0 8px;
+      font-size: 31px;
+      letter-spacing: -0.5px;
+    }
+
+    .cta-block p {
+      margin: 0;
+      color: rgba(255,255,255,0.86);
+      line-height: 1.6;
+      max-width: 620px;
+    }
+
+    .cta-block .play-btn img {
+      height: 60px;
+      filter: drop-shadow(0 10px 16px rgba(0,0,0,0.16));
+    }
+
+    footer {
+      padding: 34px 0 44px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .footer-inner {
+      border-top: 1px solid rgba(120, 92, 78, 0.1);
+      padding-top: 22px;
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a:hover {
+      color: var(--primary-dark);
+    }
+
+    @media (max-width: 1080px) {
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 36px 28px;
+      }
+
+      .phone-zone {
+        min-height: 500px;
+      }
+
+      .features {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 680px) {
+      .nav {
+        min-height: 68px;
+      }
+
+      .nav-links {
+        gap: 14px;
+      }
+
+      .hero-wrap {
+        padding-top: 24px;
+      }
+
+      .hero {
+        padding: 28px 20px;
+        border-radius: 24px;
+      }
+
+      h1 {
+        font-size: 42px;
+      }
+
+      .hero-text p {
+        font-size: 17px;
+      }
+
+      .phone-frame {
+        width: 256px;
+        height: 520px;
+      }
+
+      .phone-zone {
+        min-height: 430px;
+      }
+
+      .floating-card {
+        right: 0;
+        top: 52px;
+        max-width: 170px;
+      }
+
+      .floating-mini {
+        left: 0;
+        bottom: 68px;
+      }
+
+      .features {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-block {
+        padding: 26px 22px;
+        border-radius: 24px;
+      }
+
+      .cta-block h3 {
+        font-size: 26px;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
-<header class="container">
-    <div class="logo">Lifaro</div>
-    <nav>
-        <a href="#features">Funktionen</a>
+  <div class="topbar">
+    <div class="container nav">
+      <a href="index.html" class="brand">
+        <span class="brand-badge">L</span>
+        <span>Lifaro</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="#funktionen">Funktionen</a>
         <a href="datenschutz.html">Datenschutz</a>
         <a href="impressum.html">Impressum</a>
-    </nav>
-</header>
-
-<section class="hero container">
-    <div class="hero-text">
-        <h1>Dein Leben. Einfach organisiert.</h1>
-        <p>
-            Kalender, Einkauf, Familie, Notizen und Gesundheit – alles in einer App.
-        </p>
-
-        <!-- PLAY STORE BUTTON -->
-        <a class="play-btn" href="https://play.google.com/store/apps" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg">
-        </a>
+      </div>
     </div>
+  </div>
 
-    <div style="flex:1; text-align:center;">
-        <div style="
-            background:#efe6e1;
-            border-radius:20px;
-            padding:20px;
-            display:inline-block;
-        ">
-            📱 Deine App Vorschau
+  <main>
+    <section class="hero-wrap">
+      <div class="container hero">
+        <div class="hero-text">
+          <div class="eyebrow">✨ Alles an einem Ort</div>
+
+          <h1>Dein Leben.<br>Einfach organisiert.</h1>
+
+          <p>
+            Lifaro verbindet Kalender, Einkauf, Familie, Notizen und Gesundheit
+            in einer App – übersichtlich, modern und gemacht für den Alltag.
+          </p>
+
+          <div class="hero-actions">
+            <a
+              class="play-btn"
+              href="https://play.google.com/store/apps/details?id=com.tobias.lebenskalender"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Bei Google Play herunterladen"
+            >
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                alt="Google Play"
+              />
+            </a>
+
+            <div class="hero-note">Aktuell im Test / bald offiziell verfügbar</div>
+          </div>
+
+          <div class="hero-points">
+            <span>📅 Kalender</span>
+            <span>🛒 Einkauf</span>
+            <span>👨‍👩‍👧 Familie</span>
+            <span>📝 Notizen</span>
+            <span>🩺 Gesundheit</span>
+          </div>
         </div>
+
+        <div class="phone-zone">
+          <div class="phone-glow"></div>
+          <div class="phone-shadow"></div>
+
+          <div class="phone-frame">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <img src="app-preview.jpg" alt="Lifaro App Vorschau">
+            </div>
+          </div>
+
+          <div class="floating-card">
+            <strong>Gemeinsam planen</strong>
+            <span>Kalender, Einkauf und Familie in einer sauberen Übersicht.</span>
+          </div>
+
+          <div class="floating-mini">
+            Schnell. Übersichtlich. Alltagstauglich.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="funktionen" class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Funktionen</h2>
+          </div>
+          <p>
+            Entwickelt für Menschen, die Termine, Haushalt und persönliche
+            Organisation nicht über fünf verschiedene Apps verteilen möchten.
+          </p>
+        </div>
+
+        <div class="features">
+          <div class="feature-card">
+            <div class="feature-icon">📅</div>
+            <h3>Kalender</h3>
+            <p>Monatsansicht, Termine, Schichten und besondere Tage in einer klaren Übersicht.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">🛒</div>
+            <h3>Einkauf</h3>
+            <p>Einkaufsliste, Rezepte, Vorrat und Wochenplanung sauber miteinander verbunden.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">👨‍👩‍👧</div>
+            <h3>Familie</h3>
+            <p>Gemeinsame Nutzung, Family-Funktionen und Cloud-Anbindung für euren Alltag.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">📝</div>
+            <h3>Notizen</h3>
+            <p>Notizen und Checklisten für Ideen, Aufgaben, Einkäufe und kleine Erinnerungen.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">🩺</div>
+            <h3>Gesundheit</h3>
+            <p>Zyklus, Tagebuch und persönliche Einträge in einem geschützten Bereich.</p>
+          </div>
+        </div>
+
+        <div class="cta-block">
+          <div>
+            <h3>Hol dir Lifaro</h3>
+            <p>
+              Die App ist bereits in Entwicklung und wird laufend verbessert.
+              Alle wichtigen Infos findest du hier auf der Website.
+            </p>
+          </div>
+
+          <a
+            class="play-btn"
+            href="https://play.google.com/store/apps/details?id=com.tobias.lebenskalender"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Bei Google Play herunterladen"
+          >
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+              alt="Google Play"
+            />
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>© 2026 Tobias Interactive</div>
+
+      <div class="footer-links">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </div>
     </div>
-</section>
-
-<section id="features" class="container features">
-
-    <div class="card">
-        <h3>📅 Kalender</h3>
-        <p>Monatsansicht, Termine, Schichten und besondere Tage.</p>
-    </div>
-
-    <div class="card">
-        <h3>🛒 Einkauf</h3>
-        <p>Einkaufslisten, Rezepte und Wochenplanung kombiniert.</p>
-    </div>
-
-    <div class="card">
-        <h3>👨‍👩‍👧 Familie</h3>
-        <p>Gemeinsame Nutzung und Cloud-Funktionen.</p>
-    </div>
-
-    <div class="card">
-        <h3>📝 Notizen</h3>
-        <p>Notizen und Checklisten für deinen Alltag.</p>
-    </div>
-
-    <div class="card">
-        <h3>🩺 Gesundheit</h3>
-        <p>Zyklus, Tagebuch und persönliche Einträge.</p>
-    </div>
-
-</section>
-
-<footer>
-    © 2026 Tobias Interactive • 
-    <a href="impressum.html">Impressum</a> • 
-    <a href="datenschutz.html">Datenschutz</a>
-</footer>
+  </footer>
 
 </body>
 </html>

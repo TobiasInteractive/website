@@ -1,594 +1,177 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lifaro – Dein Leben. Einfach organisiert.</title>
-  <meta
-    name="description"
-    content="Lifaro ist deine App für Kalender, Familie, Einkauf, Notizen, Haushalt, Zyklus und Gesundheit – einfach, übersichtlich und gemeinsam organisiert."
-  />
-  <style>
-    :root {
-      --bg: #f4ece8;
-      --surface: #f6f1f7;
-      --card: #f1e7e2;
-      --text: #2f2521;
-      --muted: #7f665d;
-      --primary: #9a684f;
-      --primary-dark: #7d533f;
-      --border: #d8c7c0;
-      --shadow: 0 10px 30px rgba(60, 35, 20, 0.08);
-      --radius: 22px;
-      --max: 1100px;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lifaro – Dein Leben. Einfach organisiert.</title>
 
-    * {
-      box-sizing: border-box;
-    }
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4ece8;
+    color: #2f2521;
+}
 
-    html {
-      scroll-behavior: smooth;
-    }
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
 
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
+/* NAV */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
 
-    a {
-      color: var(--primary-dark);
-      text-decoration: none;
-    }
+.logo {
+    font-weight: bold;
+    font-size: 20px;
+    color: #7d533f;
+}
 
-    a:hover {
-      text-decoration: underline;
-    }
+nav a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: #7f665d;
+    font-weight: 600;
+}
 
-    .container {
-      width: min(var(--max), calc(100% - 32px));
-      margin: 0 auto;
-    }
+/* HERO */
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+    padding: 40px 20px;
+}
 
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      backdrop-filter: blur(10px);
-      background: rgba(244, 236, 232, 0.9);
-      border-bottom: 1px solid rgba(154, 104, 79, 0.12);
-    }
+.hero-text {
+    flex: 1;
+}
 
-    .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      padding: 16px 0;
-    }
+.hero-text h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
 
-    .brand {
-      font-size: 1.35rem;
-      font-weight: 700;
-      letter-spacing: 0.2px;
-      color: var(--primary-dark);
-    }
+.hero-text p {
+    color: #7f665d;
+    font-size: 18px;
+}
 
-    .nav-links {
-      display: flex;
-      gap: 18px;
-      flex-wrap: wrap;
-      align-items: center;
-    }
+.play-btn {
+    display: inline-block;
+    margin-top: 20px;
+}
 
-    .nav-links a {
-      font-weight: 600;
-      color: var(--muted);
-    }
+.play-btn img {
+    height: 60px;
+}
 
-    .hero {
-      padding: 72px 0 48px;
-    }
+/* FEATURES */
+.features {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
 
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 28px;
-      align-items: center;
-    }
+.card {
+    background: #f6f1f7;
+    padding: 20px;
+    border-radius: 16px;
+    border: 1px solid #ddd;
+}
 
-    .hero-card,
-    .phone-card,
-    .section-card,
-    .feature-card {
-      background: var(--surface);
-      border: 1px solid rgba(154, 104, 79, 0.16);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-    }
+.card h3 {
+    margin-top: 0;
+}
 
-    .hero-card {
-      padding: 36px;
-    }
-
-    .eyebrow {
-      display: inline-block;
-      padding: 8px 12px;
-      border-radius: 999px;
-      background: rgba(154, 104, 79, 0.12);
-      color: var(--primary-dark);
-      font-weight: 700;
-      font-size: 0.92rem;
-      margin-bottom: 14px;
-    }
-
-    h1 {
-      font-size: clamp(2rem, 4vw, 3.5rem);
-      line-height: 1.1;
-      margin: 0 0 14px;
-    }
-
-    .lead {
-      color: var(--muted);
-      font-size: 1.1rem;
-      margin: 0 0 24px;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-bottom: 22px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 48px;
-      padding: 12px 18px;
-      border-radius: 999px;
-      font-weight: 700;
-      border: 1px solid transparent;
-      transition: 0.2s ease;
-    }
-
-    .btn-primary {
-      background: var(--primary);
-      color: #fff;
-    }
-
-    .btn-primary:hover {
-      background: var(--primary-dark);
-      text-decoration: none;
-    }
-
-    .btn-secondary {
-      background: transparent;
-      border-color: var(--border);
-      color: var(--text);
-    }
-
-    .btn-secondary:hover {
-      background: rgba(154, 104, 79, 0.08);
-      text-decoration: none;
-    }
-
-    .hero-list {
-      display: grid;
-      gap: 10px;
-      padding: 0;
-      margin: 0;
-      list-style: none;
-      color: var(--text);
-    }
-
-    .hero-list li {
-      background: rgba(154, 104, 79, 0.06);
-      border-radius: 14px;
-      padding: 12px 14px;
-    }
-
-    .phone-card {
-      padding: 20px;
-    }
-
-    .mockup {
-      background: linear-gradient(180deg, #eaded8 0%, #f7f1ee 100%);
-      border: 2px solid #2f2521;
-      border-radius: 34px;
-      padding: 14px;
-      max-width: 320px;
-      margin: 0 auto;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.14);
-    }
-
-    .mockup-screen {
-      background: #efe6e1;
-      border-radius: 24px;
-      overflow: hidden;
-      min-height: 590px;
-      position: relative;
-    }
-
-    .mockup-topbar {
-      background: #e6d8d1;
-      padding: 18px 18px 12px;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-      font-weight: 700;
-      color: var(--primary-dark);
-      text-align: center;
-      font-size: 1.4rem;
-    }
-
-    .mockup-grid {
-      display: grid;
-      grid-template-columns: repeat(7, 1fr);
-      gap: 8px;
-      padding: 14px;
-    }
-
-    .mockup-day {
-      min-height: 64px;
-      border: 2px solid rgba(47, 37, 33, 0.24);
-      border-radius: 14px;
-      background: rgba(255, 255, 255, 0.45);
-      padding: 8px;
-      font-size: 0.8rem;
-      color: #55433d;
-    }
-
-    section {
-      padding: 20px 0 16px;
-    }
-
-    .section-head {
-      display: flex;
-      align-items: end;
-      justify-content: space-between;
-      gap: 20px;
-      margin-bottom: 18px;
-    }
-
-    .section-head h2 {
-      margin: 0;
-      font-size: clamp(1.6rem, 3vw, 2.3rem);
-    }
-
-    .section-head p {
-      margin: 8px 0 0;
-      color: var(--muted);
-      max-width: 760px;
-    }
-
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-
-    .feature-card {
-      padding: 22px;
-    }
-
-    .feature-card h3 {
-      margin-top: 0;
-      margin-bottom: 10px;
-      font-size: 1.15rem;
-    }
-
-    .feature-card p {
-      margin: 0;
-      color: var(--muted);
-    }
-
-    .split {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
-    }
-
-    .section-card {
-      padding: 24px;
-    }
-
-    .section-card h3 {
-      margin-top: 0;
-    }
-
-    .bullet-list {
-      margin: 0;
-      padding-left: 20px;
-    }
-
-    .bullet-list li + li {
-      margin-top: 8px;
-    }
-
-    .notice {
-      background: rgba(154, 104, 79, 0.08);
-      border: 1px solid rgba(154, 104, 79, 0.16);
-      border-radius: 16px;
-      padding: 16px;
-      color: var(--text);
-    }
-
-    footer {
-      margin-top: 40px;
-      border-top: 1px solid rgba(154, 104, 79, 0.16);
-      background: rgba(255, 255, 255, 0.36);
-    }
-
-    .footer-inner {
-      padding: 24px 0 36px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      color: var(--muted);
-      font-size: 0.96rem;
-    }
-
-    .footer-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-    }
-
-    @media (max-width: 920px) {
-      .hero-grid,
-      .features-grid,
-      .split {
-        grid-template-columns: 1fr;
-      }
-
-      .phone-card {
-        order: -1;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .nav {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .hero-card,
-      .section-card,
-      .feature-card,
-      .phone-card {
-        padding: 18px;
-      }
-
-      .mockup {
-        max-width: 100%;
-      }
-    }
-  </style>
+/* FOOTER */
+footer {
+    margin-top: 50px;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #7f665d;
+}
+</style>
 </head>
+
 <body>
-  <header>
-    <div class="container nav">
-      <div class="brand">Lifaro</div>
-      <nav class="nav-links">
-        <a href="#funktionen">Funktionen</a>
-        <a href="#app">Die App</a>
-        <a href="#datenschutz">Datenschutz</a>
-        <a href="#kontakt">Kontakt</a>
-      </nav>
-    </div>
-  </header>
 
-  <main>
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-card">
-          <div class="eyebrow">Dein Leben. Einfach organisiert.</div>
-          <h1>Lifaro bringt Kalender, Familie, Haushalt und Alltag in einer App zusammen.</h1>
-          <p class="lead">
-            Plane Termine, verwalte Schichten, organisiere Einkäufe, speichere Notizen,
-            nutze Gesundheits- und Zyklusfunktionen und teile ausgewählte Inhalte mit deiner Familie.
-          </p>
-
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="https://play.google.com/store/apps" target="_blank" rel="noopener noreferrer">
-              Bei Google Play ansehen
-            </a>
-            <a class="btn btn-secondary" href="#funktionen">Mehr erfahren</a>
-          </div>
-
-          <ul class="hero-list">
-            <li>📅 Kalender mit Terminen, Schichten, besonderen Tagen und Jahresübersicht</li>
-            <li>👨‍👩‍👧 Familienfunktionen mit Freigaben, gemeinsamer Planung und Cloud-Synchronisierung</li>
-            <li>🛒 Einkauf, Rezepte, Wochenplan, Vorrat und Haushaltsorganisation</li>
-            <li>📝 Notizen, Checklisten, Gesundheitstagebuch und Zyklusfunktionen</li>
-          </ul>
-        </div>
-
-        <div class="phone-card">
-          <div class="mockup">
-            <div class="mockup-screen">
-              <div class="mockup-topbar">März 2026</div>
-              <div class="mockup-grid">
-                <div class="mockup-day">1</div>
-                <div class="mockup-day">2<br>Früh</div>
-                <div class="mockup-day">3<br>VN</div>
-                <div class="mockup-day">4<br>Früh</div>
-                <div class="mockup-day">5<br>Geb.</div>
-                <div class="mockup-day">6<br>Geb.</div>
-                <div class="mockup-day">7</div>
-                <div class="mockup-day">8</div>
-                <div class="mockup-day">9<br>Nacht</div>
-                <div class="mockup-day">10<br>Nacht</div>
-                <div class="mockup-day">11<br>Nacht</div>
-                <div class="mockup-day">12</div>
-                <div class="mockup-day">13</div>
-                <div class="mockup-day">14</div>
-                <div class="mockup-day">15</div>
-                <div class="mockup-day">16</div>
-                <div class="mockup-day">17<br>Geb.</div>
-                <div class="mockup-day">18</div>
-                <div class="mockup-day">19</div>
-                <div class="mockup-day">20</div>
-                <div class="mockup-day">21</div>
-                <div class="mockup-day">22</div>
-                <div class="mockup-day">23<br>PMS</div>
-                <div class="mockup-day">24<br>PMS</div>
-                <div class="mockup-day">25<br>PMS</div>
-                <div class="mockup-day">26<br>Peri</div>
-                <div class="mockup-day">27<br>Peri</div>
-                <div class="mockup-day">28<br>Peri</div>
-                <div class="mockup-day">29<br>Peri</div>
-                <div class="mockup-day">30<br>Peri</div>
-                <div class="mockup-day">31<br>Frise</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="funktionen">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <h2>Alles an einem Ort</h2>
-            <p>
-              Lifaro bündelt genau die Bereiche, die im Alltag oft auf mehrere Apps verteilt sind.
-            </p>
-          </div>
-        </div>
-
-        <div class="features-grid">
-          <article class="feature-card">
-            <h3>📅 Kalender & Planung</h3>
-            <p>
-              Monatsansicht, Jahresübersicht, Termine, besondere Tage, Schichtplanung und eigene Einträge
-              in einer klaren Oberfläche.
-            </p>
-          </article>
-
-          <article class="feature-card">
-            <h3>👨‍👩‍👧 Familie</h3>
-            <p>
-              Familienfunktionen mit Einladungen, Rollen, Freigaben und ausgewählten gemeinsamen Inhalten
-              für Planung und Haushalt.
-            </p>
-          </article>
-
-          <article class="feature-card">
-            <h3>🛒 Einkauf & Rezepte</h3>
-            <p>
-              Einkaufslisten, Rezeptverwaltung, Wochenplanung, Zutaten-Auswahl und Vorratsbezug direkt in der App.
-            </p>
-          </article>
-
-          <article class="feature-card">
-            <h3>📝 Notizen</h3>
-            <p>
-              Notizen und Checklisten für Alltag, Haushalt und private Organisation – schnell erfasst und leicht wiedergefunden.
-            </p>
-          </article>
-
-          <article class="feature-card">
-            <h3>🩺 Gesundheit & Zyklus</h3>
-            <p>
-              Gesundheitsfunktionen, Zyklus-Einstellungen und ein Logbuch für persönliche Einträge in einem geschützten Kontext.
-            </p>
-          </article>
-
-          <article class="feature-card">
-            <h3>🏠 Region & Haushalt</h3>
-            <p>
-              Funktionen wie Tonnen-Übersicht, Bundesland-bezogene Einstellungen und weitere Hilfen für den Alltag zuhause.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="app">
-      <div class="container split">
-        <div class="section-card">
-          <h3>Für den Alltag gebaut</h3>
-          <ul class="bullet-list">
-            <li>einfache Navigation und ruhiges Design</li>
-            <li>schneller Zugriff auf häufig genutzte Bereiche</li>
-            <li>lokale Nutzung und erweiterte Online-Funktionen</li>
-            <li>geeignet für Einzelpersonen und Familien</li>
-          </ul>
-        </div>
-
-        <div class="section-card">
-          <h3>Cloud & Backup</h3>
-          <ul class="bullet-list">
-            <li>Google-Anmeldung für erweiterte Funktionen</li>
-            <li>Familien- und Cloudfunktionen für gemeinsame Nutzung</li>
-            <li>Backup-Funktion für lokal gespeicherte Daten</li>
-            <li>klare Trennung zwischen lokalen und geteilten Inhalten</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-        <div class="section-card">
-          <h3>Aktueller Stand</h3>
-          <div class="notice">
-            Lifaro befindet sich aktuell im Test bzw. in der Veröffentlichungsvorbereitung.
-            Inhalte, Funktionsumfang und Verfügbarkeit können sich bis zur finalen Veröffentlichung noch ändern.
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="datenschutz">
-      <div class="container split">
-        <div class="section-card">
-          <h3>Datenschutz</h3>
-          <p>
-            Informationen zur Verarbeitung personenbezogener Daten in der App und auf dieser Website
-            findest du in der Datenschutzerklärung.
-          </p>
-          <p>
-            <a class="btn btn-secondary" href="datenschutz.html">Zur Datenschutzerklärung</a>
-          </p>
-        </div>
-
-        <div class="section-card" id="kontakt">
-          <h3>Kontakt</h3>
-          <p>
-            Fragen zu Lifaro, Support-Anfragen oder rechtliche Anliegen kannst du per E-Mail senden.
-          </p>
-          <p>
-            <strong>E-Mail:</strong><br>
-            <a href="mailto:support@lifaro.app">support@lifaro.app</a>
-          </p>
-          <p>
-            Rechtliche Angaben findest du zusätzlich im Impressum.
-          </p>
-          <p>
-            <a class="btn btn-secondary" href="impressum.html">Zum Impressum</a>
-          </p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container footer-inner">
-      <div><strong>Lifaro</strong> – dein Leben. Einfach organisiert.</div>
-      <div class="footer-links">
-        <a href="impressum.html">Impressum</a>
+<header class="container">
+    <div class="logo">Lifaro</div>
+    <nav>
+        <a href="#features">Funktionen</a>
         <a href="datenschutz.html">Datenschutz</a>
-        <a href="mailto:support@lifaro.app">support@lifaro.app</a>
-      </div>
-      <div>© 2026 Tobias Interactive</div>
+        <a href="impressum.html">Impressum</a>
+    </nav>
+</header>
+
+<section class="hero container">
+    <div class="hero-text">
+        <h1>Dein Leben. Einfach organisiert.</h1>
+        <p>
+            Kalender, Einkauf, Familie, Notizen und Gesundheit – alles in einer App.
+        </p>
+
+        <!-- PLAY STORE BUTTON -->
+        <a class="play-btn" href="https://play.google.com/store/apps" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg">
+        </a>
     </div>
-  </footer>
+
+    <div style="flex:1; text-align:center;">
+        <div style="
+            background:#efe6e1;
+            border-radius:20px;
+            padding:20px;
+            display:inline-block;
+        ">
+            📱 Deine App Vorschau
+        </div>
+    </div>
+</section>
+
+<section id="features" class="container features">
+
+    <div class="card">
+        <h3>📅 Kalender</h3>
+        <p>Monatsansicht, Termine, Schichten und besondere Tage.</p>
+    </div>
+
+    <div class="card">
+        <h3>🛒 Einkauf</h3>
+        <p>Einkaufslisten, Rezepte und Wochenplanung kombiniert.</p>
+    </div>
+
+    <div class="card">
+        <h3>👨‍👩‍👧 Familie</h3>
+        <p>Gemeinsame Nutzung und Cloud-Funktionen.</p>
+    </div>
+
+    <div class="card">
+        <h3>📝 Notizen</h3>
+        <p>Notizen und Checklisten für deinen Alltag.</p>
+    </div>
+
+    <div class="card">
+        <h3>🩺 Gesundheit</h3>
+        <p>Zyklus, Tagebuch und persönliche Einträge.</p>
+    </div>
+
+</section>
+
+<footer>
+    © 2026 Tobias Interactive • 
+    <a href="impressum.html">Impressum</a> • 
+    <a href="datenschutz.html">Datenschutz</a>
+</footer>
+
 </body>
 </html>

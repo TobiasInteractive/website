@@ -1,35 +1,103 @@
+<!-- impressum.html -->
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Impressum – Lifaro</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root {
+      --bg: #f4ece8;
+      --surface: #f6f1f7;
+      --text: #2f2521;
+      --muted: #7f665d;
+      --primary: #9a684f;
+      --border: #d8c7c0;
+      --max: 900px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    .container {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+      padding: 32px 0 56px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid rgba(154, 104, 79, 0.16);
+      border-radius: 22px;
+      padding: 28px;
+    }
+
+    h1, h2 {
+      color: var(--primary);
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .toplink {
+      display: inline-block;
+      margin-bottom: 18px;
+      font-weight: 700;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+  </style>
 </head>
-<body style="font-family: sans-serif; max-width: 800px; margin: 40px auto; line-height: 1.6;">
+<body>
+  <div class="container">
+    <a class="toplink" href="index.html">← Zur Startseite</a>
 
-<h1>Impressum</h1>
+    <div class="card">
+      <h1>Impressum</h1>
 
-<p>
-Angaben gemäß § 5 TMG
-</p>
+      <h2>Angaben gemäß § 5 DDG</h2>
+      <p>
+        Tobias Interactive<br>
+        Tobias Böhme<br>
+        Mispelweg 17<br>
+        27578 Bremerhaven<br>
+        Deutschland
+      </p>
 
-<p>
-Tobias Interactive<br>
-Tobias Böhme<br>
-Mispelweg 17<br>
-27578 Bremerhaven<br>
-Deutschland
-</p>
+      <h2>Kontakt</h2>
+      <p>
+        E-Mail: <a href="mailto:support@lifaro.app">support@lifaro.app</a>
+      </p>
 
-<p>
-Kontakt:<br>
-E-Mail: kontakt@lifaro.app
-</p>
+      <h2>Verantwortlich für den Inhalt</h2>
+      <p>
+        Tobias Böhme<br>
+        Mispelweg 17<br>
+        27578 Bremerhaven<br>
+        Deutschland
+      </p>
 
-<h2>Verantwortlich für den Inhalt</h2>
-<p>
-Tobias Jöhme
-</p>
-
+      <h2>Hinweis</h2>
+      <p class="muted">
+        Sofern weitere gesetzlich erforderliche Angaben bestehen sollten, etwa eine Umsatzsteuer-Identifikationsnummer,
+        Wirtschafts-Identifikationsnummer oder Registereintragung, sind diese hier zusätzlich zu ergänzen.
+      </p>
+    </div>
+  </div>
 </body>
 </html>

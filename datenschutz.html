@@ -1,62 +1,245 @@
+<!-- datenschutz.html -->
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <title>Datenschutz – Lifaro</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Datenschutzerklärung – Lifaro</title>
+  <style>
+    :root {
+      --bg: #f4ece8;
+      --surface: #f6f1f7;
+      --text: #2f2521;
+      --muted: #7f665d;
+      --primary: #9a684f;
+      --max: 960px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+    }
+
+    .container {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+      padding: 32px 0 56px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid rgba(154, 104, 79, 0.16);
+      border-radius: 22px;
+      padding: 28px;
+    }
+
+    h1, h2, h3 {
+      color: var(--primary);
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .toplink {
+      display: inline-block;
+      margin-bottom: 18px;
+      font-weight: 700;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    ul {
+      padding-left: 22px;
+    }
+  </style>
 </head>
-<body style="font-family:sans-serif;max-width:800px;margin:40px auto;line-height:1.6;">
+<body>
+  <div class="container">
+    <a class="toplink" href="index.html">← Zur Startseite</a>
 
-<h1>Datenschutzerklärung</h1>
+    <div class="card">
+      <h1>Datenschutzerklärung</h1>
 
-<h2>1. Allgemeine Hinweise</h2>
-<p>
-Der Schutz Ihrer persönlichen Daten ist uns wichtig. Diese Datenschutzerklärung informiert Sie über die Art, den Umfang und Zweck der Verarbeitung von Daten in unserer App "Lifaro" sowie auf unserer Website.
-</p>
+      <h2>1. Verantwortlicher</h2>
+      <p>
+        Tobias Interactive<br>
+        Tobias Böhme<br>
+        Mispelweg 17<br>
+        27578 Bremerhaven<br>
+        Deutschland<br><br>
+        E-Mail: <a href="mailto:support@lifaro.app">support@lifaro.app</a>
+      </p>
 
-<h2>2. Verantwortlicher</h2>
-<p>
-Tobias Interactive<br>
-Tobias Böhme<br>
-Mispelweg 17<br>
-27578 Bremerhaven<br>
-Deutschland<br><br>
-E-Mail: support@lifaro.app
-</p>
+      <h2>2. Allgemeine Hinweise zur Datenverarbeitung</h2>
+      <p>
+        Diese Datenschutzerklärung informiert über die Verarbeitung personenbezogener Daten
+        bei der Nutzung der Website und der App „Lifaro“.
+      </p>
+      <p>
+        Personenbezogene Daten werden nur verarbeitet, soweit dies zur Bereitstellung der Website,
+        der App-Funktionen sowie zur Kommunikation mit Nutzerinnen und Nutzern erforderlich ist.
+      </p>
 
-<h2>3. Datenverarbeitung in der App</h2>
-<p>
-Die App "Lifaro" dient zur Organisation von Terminen und persönlichen Daten. Je nach Nutzung können folgende Daten gespeichert werden:
-</p>
-<ul>
-<li>Kalenderdaten</li>
-<li>Notizen</li>
-<li>Benutzereinstellungen</li>
-</ul>
+      <h2>3. Website</h2>
+      <h3>3.1 Hosting über GitHub Pages</h3>
+      <p>
+        Diese Website wird über GitHub Pages bereitgestellt. Beim Aufruf der Website können technisch notwendige
+        Verbindungsdaten verarbeitet werden, etwa IP-Adresse, Datum und Uhrzeit des Zugriffs, Browserinformationen
+        und angeforderte Inhalte.
+      </p>
+      <p>
+        Anbieter von GitHub Pages ist GitHub, Inc.
+      </p>
 
-<p>
-Diese Daten werden ausschließlich zur Funktion der App verwendet.
-</p>
+      <h3>3.2 Domain und DNS</h3>
+      <p>
+        Die Domain wird über IONOS verwaltet. Im Rahmen der Domain- und DNS-Bereitstellung können technisch
+        erforderliche Verbindungsdaten verarbeitet werden.
+      </p>
 
-<h2>4. Speicherung der Daten</h2>
-<p>
-Die Daten werden lokal auf dem Gerät gespeichert. Eine Weitergabe an Dritte erfolgt nicht.
-</p>
+      <h3>3.3 Kontaktaufnahme</h3>
+      <p>
+        Wenn Sie per E-Mail Kontakt aufnehmen, werden die von Ihnen übermittelten Angaben zur Bearbeitung
+        Ihrer Anfrage verarbeitet.
+      </p>
 
-<h2>5. Hosting der Website</h2>
-<p>
-Unsere Website wird über GitHub Pages betrieben (GitHub Inc., USA). Beim Besuch können technische Daten (z. B. IP-Adresse) verarbeitet werden.
-</p>
+      <h2>4. App „Lifaro“</h2>
+      <h3>4.1 Lokal gespeicherte Inhalte</h3>
+      <p>
+        Die App kann lokal auf Ihrem Gerät Daten speichern, die Sie selbst anlegen oder verwalten, insbesondere:
+      </p>
+      <ul>
+        <li>Kalendereinträge und Termine</li>
+        <li>besondere Tage und benutzerdefinierte Einträge</li>
+        <li>Notizen und Checklisten</li>
+        <li>Einkaufslisten, Vorratsdaten, Wochenplanungen und Rezepte</li>
+        <li>App-Einstellungen und Darstellungsoptionen</li>
+        <li>optional Bilddateien, etwa Rezeptbilder</li>
+      </ul>
 
-<h2>6. Ihre Rechte</h2>
-<p>
-Sie haben jederzeit das Recht auf Auskunft, Berichtigung oder Löschung Ihrer Daten.
-</p>
+      <h3>4.2 Gesundheits- und Zyklusdaten</h3>
+      <p>
+        Wenn Sie entsprechende Funktionen der App verwenden, können Gesundheits- und Zyklusdaten verarbeitet werden,
+        etwa Einträge im Gesundheitstagebuch, Zyklusinformationen oder ähnliche sensible Angaben.
+      </p>
+      <p>
+        Diese Daten werden ausschließlich zur Bereitstellung der von Ihnen genutzten Funktionen verarbeitet.
+      </p>
 
-<h2>7. Kontakt</h2>
-<p>
-Bei Fragen zum Datenschutz können Sie uns unter folgender E-Mail-Adresse kontaktieren:<br>
-support@lifaro.app
-</p>
+      <h3>4.3 Google-Anmeldung</h3>
+      <p>
+        Für bestimmte Funktionen kann eine Anmeldung mit einem Google-Konto verwendet werden.
+        Dabei können insbesondere Anmeldedaten, eine Nutzerkennung sowie die mit dem Google-Konto verknüpfte
+        E-Mail-Adresse verarbeitet werden.
+      </p>
 
+      <h3>4.4 Familien- und Cloudfunktionen</h3>
+      <p>
+        Wenn Sie Familien- oder Cloudfunktionen verwenden, können von Ihnen freigegebene Inhalte über Cloud-Dienste
+        synchronisiert und gemeinsam nutzbar gemacht werden. Je nach Nutzung betrifft dies insbesondere:
+      </p>
+      <ul>
+        <li>Haushalts- oder Familienzuordnungen</li>
+        <li>gemeinsam freigegebene Planungsdaten</li>
+        <li>gemeinsam genutzte Einkaufs- und Rezeptdaten</li>
+        <li>Einladungs- und Rolleninformationen innerhalb einer Familie</li>
+      </ul>
+
+      <h3>4.5 Backup-Funktion</h3>
+      <p>
+        Wenn Sie die Backup-Funktion nutzen, können lokal gespeicherte Daten zu Sicherungszwecken online gespeichert
+        oder mit Ihrem Google-Konto verknüpft werden. Welche Daten Teil eines Backups sind, richtet sich nach der
+        jeweiligen Funktion der App.
+      </p>
+
+      <h2>5. Zwecke der Verarbeitung</h2>
+      <p>Die Verarbeitung erfolgt insbesondere zu folgenden Zwecken:</p>
+      <ul>
+        <li>Bereitstellung der Website</li>
+        <li>Bereitstellung und Funktionsfähigkeit der App</li>
+        <li>Speicherung und Verwaltung Ihrer Inhalte</li>
+        <li>Synchronisierung freigegebener Inhalte</li>
+        <li>Durchführung von Anmelde- und Backup-Funktionen</li>
+        <li>Bearbeitung von Support- und Kontaktanfragen</li>
+      </ul>
+
+      <h2>6. Rechtsgrundlagen</h2>
+      <p>
+        Soweit personenbezogene Daten zur Bereitstellung der Website oder App-Funktionen verarbeitet werden,
+        erfolgt dies auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, soweit die Verarbeitung zur Durchführung
+        nutzerbezogener Funktionen erforderlich ist, oder auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO,
+        soweit ein berechtigtes Interesse an einem sicheren und funktionsfähigen Angebot besteht.
+      </p>
+      <p>
+        Soweit Gesundheits- oder Zyklusdaten verarbeitet werden, erfolgt dies ausschließlich im Rahmen der von Ihnen
+        aktiv genutzten Funktionen und auf Basis Ihrer Nutzung bzw. Ihrer ausdrücklichen Eingaben.
+      </p>
+
+      <h2>7. Empfänger oder Kategorien von Empfängern</h2>
+      <p>
+        Eine Weitergabe personenbezogener Daten erfolgt nur, soweit dies für die genannten Funktionen erforderlich ist.
+        Je nach Nutzung können dabei insbesondere technische Dienstleister bzw. Plattformen eingebunden sein, etwa:
+      </p>
+      <ul>
+        <li>GitHub Pages für die Website</li>
+        <li>IONOS für Domain- und DNS-Verwaltung</li>
+        <li>Google-Dienste im Rahmen der Google-Anmeldung</li>
+        <li>Cloud-Dienste im Rahmen von Familien- und Synchronisierungsfunktionen</li>
+        <li>Cloud-Dienste im Rahmen der Backup-Funktion</li>
+      </ul>
+
+      <h2>8. Speicherdauer</h2>
+      <p>
+        Personenbezogene Daten werden nur so lange gespeichert, wie dies für die jeweiligen Zwecke erforderlich ist
+        oder bis Sie gespeicherte Inhalte selbst löschen.
+      </p>
+      <p>
+        Lokal gespeicherte App-Daten bleiben grundsätzlich auf Ihrem Gerät gespeichert, bis Sie diese in der App
+        oder durch Deinstallation der App entfernen.
+      </p>
+
+      <h2>9. Ihre Rechte</h2>
+      <p>Sie haben nach Maßgabe der DSGVO insbesondere folgende Rechte:</p>
+      <ul>
+        <li>Recht auf Auskunft</li>
+        <li>Recht auf Berichtigung</li>
+        <li>Recht auf Löschung</li>
+        <li>Recht auf Einschränkung der Verarbeitung</li>
+        <li>Recht auf Datenübertragbarkeit</li>
+        <li>Recht auf Widerspruch gegen die Verarbeitung</li>
+        <li>Recht auf Beschwerde bei einer Datenschutzaufsichtsbehörde</li>
+      </ul>
+
+      <h2>10. Kontakt zum Datenschutz</h2>
+      <p>
+        Bei Fragen zur Verarbeitung personenbezogener Daten können Sie sich an folgende E-Mail-Adresse wenden:
+      </p>
+      <p>
+        <a href="mailto:support@lifaro.app">support@lifaro.app</a>
+      </p>
+
+      <h2>11. Stand</h2>
+      <p>Stand dieser Datenschutzerklärung: März 2026</p>
+
+      <p class="muted">
+        Hinweis: Diese Datenschutzerklärung basiert auf den von dir beschriebenen Funktionen und den von dir gezeigten
+        Code- und App-Bestandteilen. Wenn später weitere Dienste hinzukommen, etwa Analytics, Crash-Reporting,
+        Werbung, Zahlungsdienste oder zusätzliche Cloud-Integrationen, muss diese Erklärung entsprechend ergänzt werden.
+      </p>
+    </div>
+  </div>
 </body>
 </html>

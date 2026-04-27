@@ -140,30 +140,55 @@
         Diese Daten werden ausschließlich zur Bereitstellung der von Ihnen genutzten Funktionen verarbeitet.
       </p>
 
-      <h3>4.3 Google-Anmeldung</h3>
+      <h3>4.3 Google-Anmeldung und Firebase Authentication</h3>
       <p>
         Für bestimmte Funktionen kann eine Anmeldung mit einem Google-Konto verwendet werden.
-        Dabei können insbesondere Anmeldedaten, eine Nutzerkennung sowie die mit dem Google-Konto verknüpfte
-        E-Mail-Adresse verarbeitet werden.
+        Dabei können insbesondere eine Nutzerkennung, die mit dem Google-Konto verknüpfte
+        E-Mail-Adresse sowie technische Authentifizierungsdaten verarbeitet werden.
+      </p>
+      <p>
+        Die Anmeldung wird über Firebase Authentication bzw. Google-Dienste bereitgestellt.
+        Eine Google-Anmeldung ist insbesondere für Cloud-, Family-, Backup- und Gerätewechsel-Funktionen erforderlich.
       </p>
 
       <h3>4.4 Familien- und Cloudfunktionen</h3>
       <p>
-        Wenn Sie Familien- oder Cloudfunktionen verwenden, können von Ihnen freigegebene Inhalte über Cloud-Dienste
-        synchronisiert und gemeinsam nutzbar gemacht werden. Je nach Nutzung betrifft dies insbesondere:
+        Wenn Sie Familien- oder Cloudfunktionen verwenden, können von Ihnen freigegebene Inhalte
+        über Firebase Cloud Firestore synchronisiert und gemeinsam nutzbar gemacht werden.
+        Je nach Nutzung betrifft dies insbesondere:
       </p>
       <ul>
         <li>Haushalts- oder Familienzuordnungen</li>
-        <li>gemeinsam freigegebene Planungsdaten</li>
-        <li>gemeinsam genutzte Einkaufs- und Rezeptdaten</li>
         <li>Einladungs- und Rolleninformationen innerhalb einer Familie</li>
+        <li>freigegebene Schichten, Termine und benutzerdefinierte Kalendereinträge</li>
+        <li>gemeinsam genutzte Einkaufslisten, Wochenplanungen, Vorratsdaten und Rezepte</li>
+        <li>Kurznamen und Farbauswahl innerhalb der Familienfunktion</li>
       </ul>
+      <p>
+        Family-Daten sind für Mitglieder derselben Familie sichtbar, soweit dies für die jeweilige
+        Funktion erforderlich ist.
+      </p>
 
       <h3>4.5 Backup-Funktion</h3>
       <p>
-        Wenn Sie die Backup-Funktion nutzen, können lokal gespeicherte Daten zu Sicherungszwecken online gespeichert
-        oder mit Ihrem Google-Konto verknüpft werden. Welche Daten Teil eines Backups sind, richtet sich nach der
-        jeweiligen Funktion der App.
+        Wenn Sie die Backup-Funktion nutzen, können lokal gespeicherte App-Daten zu Sicherungszwecken
+        in Firebase Storage gespeichert und mit Ihrem Lifaro-Konto verknüpft werden.
+      </p>
+      <p>
+        Das Backup kann insbesondere lokal gespeicherte Kalenderdaten, Termine, Notizen,
+        Rezepte, Einstellungen und weitere lokal gespeicherte App-Inhalte enthalten.
+        Family-Daten, die bereits über die Cloud synchronisiert werden, sind grundsätzlich nicht Teil
+        des Geräte-Backups.
+      </p>
+
+      <h3>4.6 Premium und In-App-Käufe</h3>
+      <p>
+        Lifaro kann kostenpflichtige Premium-Funktionen anbieten. Die Abwicklung von Käufen
+        und Abonnements erfolgt über Google Play. Dabei können kauf- und abrechnungsbezogene
+        Daten durch Google verarbeitet werden.
+      </p>
+      <p>
+        Lifaro erhält keine vollständigen Zahlungsdaten wie Kreditkarten- oder Kontodaten.
       </p>
 
       <h2>5. Zwecke der Verarbeitung</h2>
@@ -198,8 +223,10 @@
         <li>GitHub Pages für die Website</li>
         <li>IONOS für Domain- und DNS-Verwaltung</li>
         <li>Google-Dienste im Rahmen der Google-Anmeldung</li>
-        <li>Cloud-Dienste im Rahmen von Familien- und Synchronisierungsfunktionen</li>
-        <li>Cloud-Dienste im Rahmen der Backup-Funktion</li>
+        <li>Firebase Authentication für die Anmeldung</li>
+        <li>Firebase Cloud Firestore für Cloud-, Family- und Synchronisierungsfunktionen</li>
+        <li>Firebase Storage für die Backup-Funktion</li>
+        <li>Google Play Billing für Premium-Abos und In-App-Käufe</li>
       </ul>
 
       <h2>8. Speicherdauer</h2>
@@ -226,7 +253,22 @@
 
       <h2>10. Kontolöschung und Datenlöschung</h2>
       <p>
-        Nutzerinnen und Nutzer können jederzeit die Löschung ihres App-Kontos und der damit verbundenen Daten anfordern.
+        Nutzerinnen und Nutzer können ihr Lifaro-Konto und die damit verbundenen Daten
+        direkt in der App löschen oder eine Löschung per E-Mail anfordern.
+      </p>
+      <p>
+        Die Kontolöschung ist in der App im Bereich <strong>Familie / Cloud</strong> unter
+        <strong>Account</strong> über <strong>„Konto löschen“</strong> erreichbar.
+      </p>
+      <p>
+        Bei der Löschung werden insbesondere das Lifaro-Konto, das Cloud-Profil,
+        vorhandene Cloud-Backups, persönliche Cloud-Daten und Family-Verknüpfungen gelöscht,
+        soweit keine gesetzlichen Aufbewahrungspflichten entgegenstehen.
+      </p>
+      <p>
+        Wenn ein Nutzer Owner einer Familie mit weiteren Mitgliedern ist, muss die Familie
+        vorher übertragen oder die anderen Mitglieder müssen entfernt werden. Ist der Owner
+        das einzige Mitglied, kann die Familie im Rahmen der Kontolöschung gelöscht werden.
       </p>
       <p>
         Eine genaue Anleitung dazu finden Sie hier:
@@ -242,7 +284,7 @@
       </p>
 
       <h2>12. Stand</h2>
-      <p>Stand dieser Datenschutzerklärung: März 2026</p>
+      <p>Stand dieser Datenschutzerklärung: April 2026</p>
     </div>
   </div>
 </body>

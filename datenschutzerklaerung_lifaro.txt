@@ -1,0 +1,206 @@
+Datenschutzerklärung
+
+1. Verantwortlicher
+
+Tobias Böhme
+Mispelweg 17
+27578 Bremerhaven
+Deutschland
+
+E-Mail: tobiasinteractive@gmail.com
+
+2. Allgemeine Hinweise zur Datenverarbeitung
+
+Diese Datenschutzerklärung informiert über die Verarbeitung personenbezogener Daten bei der Nutzung der Website und der App „Lifaro“.
+
+Personenbezogene Daten werden nur verarbeitet, soweit dies zur Bereitstellung der Website, der App-Funktionen sowie zur Kommunikation mit Nutzerinnen und Nutzern erforderlich ist.
+
+3. Website
+
+3.1 Hosting über GitHub Pages
+
+Diese Website wird über GitHub Pages bereitgestellt. Beim Aufruf der Website können technisch notwendige Verbindungsdaten verarbeitet werden, etwa IP-Adresse, Datum und Uhrzeit des Zugriffs, Browserinformationen und angeforderte Inhalte.
+
+Anbieter von GitHub Pages ist GitHub, Inc.
+
+3.2 Domain und DNS
+
+Die Domain wird über IONOS verwaltet. Im Rahmen der Domain- und DNS-Bereitstellung können technisch erforderliche Verbindungsdaten verarbeitet werden.
+
+3.3 Kontaktaufnahme
+
+Wenn Sie per E-Mail Kontakt aufnehmen, werden die von Ihnen übermittelten Angaben zur Bearbeitung Ihrer Anfrage verarbeitet.
+
+4. App „Lifaro“
+
+4.1 Lokal gespeicherte Inhalte
+
+Die App kann lokal auf Ihrem Gerät Daten speichern, die Sie selbst anlegen oder verwalten, insbesondere:
+
+- Kalendereinträge und Termine
+- besondere Tage und benutzerdefinierte Einträge
+- Notizen und Checklisten
+- Einkaufslisten, Vorratsdaten, Wochenplanungen und Rezepte
+- Einträge im Lifaro Tresor, soweit Sie entsprechende Funktionen nutzen
+- generierte Benutzernamen oder Passwörter, soweit diese von Ihnen gespeichert oder weiterverwendet werden
+- App-Einstellungen und Darstellungsoptionen
+- optional Bilddateien, etwa Rezeptbilder
+- von Ihnen ausgewählte Bilder oder Dateien, etwa zum Hinzufügen oder Auslesen von Rezeptinformationen
+
+Viele Inhalte werden zunächst lokal auf Ihrem Gerät verarbeitet. Eine Übertragung in die Cloud erfolgt nur, wenn Sie entsprechende Cloud-, Family-, Backup- oder Synchronisierungsfunktionen verwenden.
+
+Rein lokal gespeicherte Inhalte werden grundsätzlich nicht an Lifaro oder Dritte übertragen, solange Sie keine Cloud-, Family-, Backup- oder Synchronisierungsfunktionen verwenden.
+
+4.2 Gesundheits- und Zyklusdaten
+
+Wenn Sie entsprechende Funktionen der App verwenden, können Gesundheits- und Zyklusdaten verarbeitet werden, etwa Einträge im Gesundheitstagebuch, Beschwerden, Medikamente, Zyklusinformationen oder ähnliche sensible Angaben.
+
+Diese Daten werden ausschließlich zur Bereitstellung der von Ihnen aktiv genutzten Funktionen verarbeitet. Eine Übertragung dieser Daten erfolgt nur, soweit Sie entsprechende Cloud-, Backup- oder Synchronisierungsfunktionen aktiv nutzen und die jeweilige Funktion dies erfordert.
+
+4.3 Google-Anmeldung und Firebase Authentication
+
+Für bestimmte Funktionen kann eine Anmeldung mit einem Google-Konto verwendet werden. Dabei können insbesondere eine Nutzerkennung, die mit dem Google-Konto verknüpfte E-Mail-Adresse sowie technische Authentifizierungsdaten verarbeitet werden.
+
+Die Anmeldung wird über Firebase Authentication bzw. Google-Dienste bereitgestellt. Eine Google-Anmeldung ist insbesondere für Cloud-, Family-, Backup- und Gerätewechsel-Funktionen erforderlich.
+
+4.4 Familien- und Cloudfunktionen
+
+Wenn Sie Familien- oder Cloudfunktionen verwenden, können von Ihnen freigegebene Inhalte über Firebase Cloud Firestore synchronisiert und gemeinsam nutzbar gemacht werden. Je nach Nutzung betrifft dies insbesondere:
+
+- Haushalts- oder Familienzuordnungen
+- Einladungs- und Rolleninformationen innerhalb einer Familie
+- freigegebene Schichten, Termine und benutzerdefinierte Kalendereinträge
+- gemeinsam genutzte Einkaufslisten, Wochenplanungen, Vorratsdaten und Rezepte
+- Kurznamen und Farbauswahl innerhalb der Familienfunktion
+
+Family-Daten sind für Mitglieder derselben Familie sichtbar, soweit dies für die jeweilige Funktion erforderlich ist.
+
+Inhalte werden nur dann innerhalb einer Familie geteilt, wenn Sie die entsprechenden Family- oder Freigabefunktionen verwenden.
+
+4.5 Backup-Funktion
+
+Wenn Sie die Backup-Funktion nutzen, können lokal gespeicherte App-Daten zu Sicherungszwecken in Firebase Storage gespeichert und mit Ihrem Lifaro-Konto verknüpft werden.
+
+Das Backup kann insbesondere lokal gespeicherte Kalenderdaten, Termine, Notizen, Rezepte, Einstellungen, Lifaro-Tresor-Daten und weitere lokal gespeicherte App-Inhalte enthalten. Family-Daten, die bereits über die Cloud synchronisiert werden, sind grundsätzlich nicht Teil des Geräte-Backups.
+
+Die Backup-Funktion ist optional. Eine Speicherung von Backup-Daten in Firebase Storage erfolgt nur, wenn Sie die Backup-Funktion verwenden.
+
+4.6 Lifaro Tresor, Generator-Funktionen und Autofill
+
+Der Lifaro Tresor kann Funktionen zur Verwaltung oder Erstellung von Zugangsdaten anbieten, etwa Generatoren für Passwörter und Benutzernamen.
+
+Generierte Passwörter und Benutzernamen werden grundsätzlich nur zur Bereitstellung der jeweiligen Funktion angezeigt oder verarbeitet. Eine weitergehende Speicherung erfolgt nur, soweit Sie dies selbst in der App veranlassen oder entsprechende Speicher-, Backup- oder Synchronisierungsfunktionen nutzen.
+
+Tresor-Daten können besonders sensible Informationen enthalten. Bitte gehen Sie sorgfältig mit Zugangsdaten um und speichern Sie nur solche Informationen, die Sie bewusst in Lifaro verwalten möchten.
+
+Soweit Tresor-Daten lokal genutzt werden, bleiben diese grundsätzlich auf Ihrem Gerät gespeichert. Eine Speicherung oder Übertragung im Rahmen der Backup-Funktion erfolgt nur, wenn Sie die Backup-Funktion nutzen.
+
+Zusätzlich kann Lifaro eine Autofill-Funktion anbieten. Wenn Sie Lifaro als Autofill-Dienst auf Ihrem Gerät aktivieren, kann Lifaro bei geeigneten Anmeldefeldern in anderen Apps oder Websites Vorschläge zum Ausfüllen von Benutzernamen und Passwörtern anzeigen. Die Autofill-Funktion wird nur verwendet, wenn Sie Lifaro als Autofill-Dienst aktivieren und einen Tresor-Eintrag zum Ausfüllen auswählen.
+
+Dabei werden die in Lifaro gespeicherten Zugangsdaten lokal auf Ihrem Gerät verarbeitet und an die jeweilige App oder Website übergeben, in der Sie das Ausfüllen aktiv auslösen. Eine Übertragung der Autofill-Daten an Lifaro-Server erfolgt dabei nicht. Eine Speicherung oder Übertragung von Tresor-Daten im Rahmen der Backup-Funktion erfolgt nur, wenn Sie die Backup-Funktion verwenden.
+
+4.7 Rezeptbilder und Bilderkennung
+
+Die App kann Funktionen anbieten, mit denen Sie Bilder von Ihrem Gerät auswählen oder hinzufügen können, etwa um Rezeptbilder zu speichern oder Rezeptinformationen aus einem Bild zu übernehmen.
+
+Die ausgewählten Bilder werden nur zur Bereitstellung der jeweiligen Funktion verarbeitet. Eine Verarbeitung erfolgt grundsätzlich nur für Bilder oder Dateien, die Sie selbst in der App auswählen.
+
+Soweit aus einem Bild Rezeptinformationen erkannt werden, werden die erkannten Inhalte nur zur Erstellung oder Bearbeitung des jeweiligen Rezepts verwendet. Eine Speicherung erfolgt nur, wenn Sie das Rezept oder die entsprechenden Inhalte in der App speichern.
+
+Eine Übertragung von Bildern oder daraus erkannten Rezeptinformationen erfolgt nur, wenn dies für die jeweilige Funktion erforderlich ist oder wenn Sie Cloud-, Family-, Backup- oder Synchronisierungsfunktionen nutzen.
+
+4.8 Sicherheit und technische Schutzmaßnahmen
+
+Lifaro setzt angemessene technische und organisatorische Maßnahmen ein, um personenbezogene Daten vor Verlust, Missbrauch und unbefugtem Zugriff zu schützen. Bei der Nutzung von Google-, Firebase- und Google-Play-Diensten gelten zusätzlich die Sicherheitsmaßnahmen der jeweiligen Anbieter.
+
+Bitte beachten Sie, dass insbesondere Zugangsdaten, Gesundheitsdaten und andere sensible Inhalte besonders schützenswert sind. Bewahren Sie Ihr Gerät sicher auf, verwenden Sie geeignete Gerätesperren und speichern Sie sensible Informationen nur, wenn Sie dies wirklich möchten.
+
+4.9 Premium und In-App-Käufe
+
+Lifaro kann kostenpflichtige Premium-Funktionen anbieten. Die Abwicklung von Käufen und Abonnements erfolgt über Google Play. Dabei können kauf- und abrechnungsbezogene Daten durch Google verarbeitet werden.
+
+Lifaro erhält keine vollständigen Zahlungsdaten wie Kreditkarten- oder Kontodaten.
+
+5. Zwecke der Verarbeitung
+
+Die Verarbeitung erfolgt insbesondere zu folgenden Zwecken:
+
+- Bereitstellung der Website
+- Bereitstellung und Funktionsfähigkeit der App
+- Speicherung und Verwaltung Ihrer Inhalte
+- Bereitstellung von Kalender-, Einkaufs-, Notiz-, Gesundheits- und Tresor-Funktionen
+- Bereitstellung von Generator-Funktionen für Passwörter und Benutzernamen
+- Bereitstellung der Autofill-Funktion zum lokalen Ausfüllen von Benutzernamen und Passwörtern in anderen Apps oder Websites
+- Hinzufügen, Speichern und Verwalten von Rezeptbildern
+- Auslesen und Übernehmen von Rezeptinformationen aus von Ihnen ausgewählten Bildern oder Dateien
+- Synchronisierung freigegebener Inhalte
+- Durchführung von Anmelde- und Backup-Funktionen
+- Bearbeitung von Support- und Kontaktanfragen
+- Abwicklung von Premium-Funktionen und In-App-Käufen über Google Play
+
+6. Rechtsgrundlagen
+
+Soweit personenbezogene Daten zur Bereitstellung der Website oder App-Funktionen verarbeitet werden, erfolgt dies auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, soweit die Verarbeitung zur Durchführung nutzerbezogener Funktionen erforderlich ist, oder auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO, soweit ein berechtigtes Interesse an einem sicheren und funktionsfähigen Angebot besteht.
+
+Soweit Gesundheits- oder Zyklusdaten verarbeitet werden, erfolgt dies ausschließlich im Rahmen der von Ihnen aktiv genutzten Funktionen und auf Basis Ihrer freiwilligen Eingaben. Soweit hierfür eine ausdrückliche Einwilligung erforderlich ist, erfolgt die Verarbeitung auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO in Verbindung mit Art. 9 Abs. 2 lit. a DSGVO.
+
+7. Empfänger oder Kategorien von Empfängern
+
+Eine Weitergabe personenbezogener Daten erfolgt nur, soweit dies für die genannten Funktionen erforderlich ist. Je nach Nutzung können dabei insbesondere technische Dienstleister bzw. Plattformen eingebunden sein, etwa:
+
+- GitHub Pages für die Website
+- IONOS für Domain- und DNS-Verwaltung
+- Google-Dienste im Rahmen der Google-Anmeldung
+- Firebase Authentication für die Anmeldung
+- Firebase Cloud Firestore für Cloud-, Family- und Synchronisierungsfunktionen
+- Firebase Storage für die Backup-Funktion
+- Google Play Billing für Premium-Abos und In-App-Käufe
+
+Rein lokal genutzte Inhalte werden grundsätzlich nicht an Dritte weitergegeben, solange Sie keine Cloud-, Family-, Backup- oder Synchronisierungsfunktionen verwenden.
+
+Bei Nutzung der Autofill-Funktion werden die von Ihnen ausgewählten Zugangsdaten lokal an die jeweilige App oder Website übergeben, in der Sie das Ausfüllen aktiv auslösen.
+
+8. Speicherdauer
+
+Personenbezogene Daten werden nur so lange gespeichert, wie dies für die jeweiligen Zwecke erforderlich ist oder bis Sie gespeicherte Inhalte selbst löschen.
+
+Lokal gespeicherte App-Daten bleiben grundsätzlich auf Ihrem Gerät gespeichert, bis Sie diese in der App oder durch Deinstallation der App entfernen.
+
+Cloud- und Backup-Daten bleiben grundsätzlich so lange gespeichert, wie Ihr Lifaro-Konto besteht oder bis Sie die entsprechenden Inhalte, Backups oder Ihr Konto löschen.
+
+9. Ihre Rechte
+
+Sie haben nach Maßgabe der DSGVO insbesondere folgende Rechte:
+
+- Recht auf Auskunft
+- Recht auf Berichtigung
+- Recht auf Löschung
+- Recht auf Einschränkung der Verarbeitung
+- Recht auf Datenübertragbarkeit
+- Recht auf Widerspruch gegen die Verarbeitung
+- Recht auf Widerruf einer erteilten Einwilligung mit Wirkung für die Zukunft
+- Recht auf Beschwerde bei einer Datenschutzaufsichtsbehörde
+
+10. Kontolöschung und Datenlöschung
+
+Nutzerinnen und Nutzer können ihr Lifaro-Konto und die damit verbundenen Daten direkt in der App löschen oder eine Löschung per E-Mail anfordern.
+
+Die Kontolöschung ist in der App im Bereich Familie / Cloud unter Account über „Konto löschen“ erreichbar.
+
+Bei der Löschung werden insbesondere das Lifaro-Konto, das Cloud-Profil, vorhandene Cloud-Backups, persönliche Cloud-Daten und Family-Verknüpfungen gelöscht, soweit keine gesetzlichen Aufbewahrungspflichten entgegenstehen.
+
+Lokal gespeicherte Daten auf Ihrem Gerät können zusätzlich durch Löschen der jeweiligen Inhalte in der App oder durch Deinstallation der App entfernt werden.
+
+Wenn ein Nutzer Owner einer Familie mit weiteren Mitgliedern ist, muss die Familie vorher übertragen oder die anderen Mitglieder müssen entfernt werden. Ist der Owner das einzige Mitglied, kann die Familie im Rahmen der Kontolöschung gelöscht werden.
+
+Eine genaue Anleitung dazu finden Sie hier: "Konto löschen" (https://lifaro.app/konto-loeschen.html)
+
+11. Kontakt zum Datenschutz
+
+Bei Fragen zur Verarbeitung personenbezogener Daten können Sie sich an folgende E-Mail-Adresse wenden:
+
+tobiasinteractive@gmail.com
+
+12. Stand
+
+Stand dieser Datenschutzerklärung: Juni 2026

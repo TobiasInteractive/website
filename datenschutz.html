@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Datenschutz – Lifaro</title>
+  <meta
+    name="description"
+    content="Datenschutzerklärung für die Website und App Lifaro."
+  />
+  <link rel="canonical" href="https://lifaro.app/datenschutz.html" />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png" />
+  <link rel="apple-touch-icon" href="/favicon.png" />
+  <meta name="theme-color" content="#9b6f5a">
+
+  <style>
+    :root {
+      --bg: #f6efea;
+      --bg-soft: #fbf7f4;
+      --card: rgba(255, 255, 255, 0.72);
+      --text: #2f2521;
+      --muted: #7d6a61;
+      --primary: #9b6f5a;
+      --primary-dark: #7f5846;
+      --line: rgba(120, 92, 78, 0.14);
+      --shadow: 0 20px 50px rgba(92, 63, 49, 0.12);
+      --radius-xl: 28px;
+      --radius-lg: 22px;
+      --max: 960px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      line-height: 1.75;
+      background:
+        radial-gradient(circle at top left, rgba(210, 187, 174, 0.35), transparent 28%),
+        radial-gradient(circle at top right, rgba(217, 201, 230, 0.28), transparent 24%),
+        linear-gradient(180deg, #f8f2ee 0%, #f5ede8 100%);
+    }
+
+    a {
+      color: var(--primary-dark);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      backdrop-filter: blur(14px);
+      background: rgba(248, 242, 238, 0.82);
+      border-bottom: 1px solid rgba(120, 92, 78, 0.08);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      min-height: 76px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+      font-size: 22px;
+      color: var(--primary-dark);
+      letter-spacing: 0.2px;
+    }
+
+    .brand:hover {
+      text-decoration: none;
+    }
+
+    .brand-badge {
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, #bb8d77, #8b6251);
+      color: white;
+      box-shadow: 0 8px 18px rgba(128, 88, 69, 0.2);
+      font-size: 19px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary-dark);
+    }
+
+    main {
+      padding: 42px 0 26px;
+    }
+
+    .page-head {
+      margin-bottom: 20px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(155, 111, 90, 0.1);
+      color: var(--primary-dark);
+      border: 1px solid rgba(155, 111, 90, 0.15);
+      padding: 9px 14px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .page-card {
+      background: linear-gradient(135deg, rgba(255,255,255,0.76), rgba(255,255,255,0.56));
+      border: 1px solid var(--line);
+      border-radius: 30px;
+      padding: 36px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(14px);
+    }
+
+    h1 {
+      margin: 0 0 18px;
+      color: var(--primary-dark);
+      font-size: clamp(36px, 6vw, 54px);
+      line-height: 1.05;
+      letter-spacing: -1px;
+    }
+
+    h2 {
+      margin: 34px 0 12px;
+      color: var(--primary);
+      font-size: 26px;
+      line-height: 1.25;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+    }
+
+    h3 {
+      margin: 26px 0 10px;
+      color: var(--primary-dark);
+      font-size: 20px;
+      line-height: 1.35;
+    }
+
+    p {
+      margin: 0 0 14px;
+    }
+
+    ul {
+      margin: 10px 0 18px;
+      padding-left: 24px;
+    }
+
+    li {
+      margin: 6px 0;
+    }
+
+    .muted {
+      color: var(--muted);
+      margin-top: 28px;
+      font-weight: 600;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 18px;
+      font-weight: 700;
+      color: var(--primary-dark);
+    }
+
+    footer {
+      padding: 34px 0 44px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .footer-inner {
+      border-top: 1px solid rgba(120, 92, 78, 0.1);
+      padding-top: 22px;
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a:hover {
+      color: var(--primary-dark);
+    }
+
+    @media (max-width: 760px) {
+      .nav {
+        min-height: 68px;
+        align-items: flex-start;
+        padding: 14px 0;
+      }
+
+      .nav-links {
+        gap: 12px;
+        justify-content: flex-end;
+      }
+
+      main {
+        padding-top: 24px;
+      }
+
+      .page-card {
+        border-radius: 24px;
+        padding: 26px 20px;
+      }
+
+      h1 {
+        font-size: 40px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="container nav">
+      <a href="/" class="brand">
+        <span class="brand-badge">L</span>
+        <span>Lifaro</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="/">Startseite</a>
+        <a href="datenschutz.html">Datenschutz</a>
+        <a href="konto-loeschen.html">Konto löschen</a>
+        <a href="impressum.html">Impressum</a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <div class="container">
+      <a class="back-link" href="/">← Zur Startseite</a>
+
+      <div class="page-head">
+        <div class="eyebrow">🔒 Datenschutz & Transparenz</div>
+      </div>
+
+      <article class="page-card">
+      <h1>Datenschutzerklärung</h1>
+      <h2>1. Verantwortlicher</h2>
+      <div>Tobias Böhme</div>
+      <div>Mispelweg 17</div>
+      <div>27578 Bremerhaven</div>
+      <div>Deutschland</div>
+      <p><strong>E-Mail:</strong> <a href="mailto:tobiasinteractive@gmail.com">tobiasinteractive@gmail.com</a></p>
+      <h2>2. Allgemeine Hinweise zur Datenverarbeitung</h2>
+      <p>Diese Datenschutzerklärung informiert über die Verarbeitung personenbezogener Daten bei der Nutzung der Website und der App „Lifaro“.</p>
+      <p>Personenbezogene Daten werden nur verarbeitet, soweit dies zur Bereitstellung der Website, der App-Funktionen sowie zur Kommunikation mit Nutzerinnen und Nutzern erforderlich ist.</p>
+      <h2>3. Website</h2>
+      <h3>3.1 Hosting über GitHub Pages</h3>
+      <p>Diese Website wird über GitHub Pages bereitgestellt. Beim Aufruf der Website können technisch notwendige Verbindungsdaten verarbeitet werden, etwa IP-Adresse, Datum und Uhrzeit des Zugriffs, Browserinformationen und angeforderte Inhalte.</p>
+      <p>Anbieter von GitHub Pages ist GitHub, Inc.</p>
+      <h3>3.2 Domain und DNS</h3>
+      <p>Die Domain wird über IONOS verwaltet. Im Rahmen der Domain- und DNS-Bereitstellung können technisch erforderliche Verbindungsdaten verarbeitet werden.</p>
+      <h3>3.3 Kontaktaufnahme</h3>
+      <p>Wenn Sie per E-Mail Kontakt aufnehmen, werden die von Ihnen übermittelten Angaben zur Bearbeitung Ihrer Anfrage verarbeitet.</p>
+      <h2>4. App „Lifaro“</h2>
+      <h3>4.1 Lokal gespeicherte Inhalte</h3>
+      <p>Die App kann lokal auf Ihrem Gerät Daten speichern, die Sie selbst anlegen oder verwalten, insbesondere:</p>
+      <ul>
+      <li>Kalendereinträge und Termine</li>
+      <li>besondere Tage und benutzerdefinierte Einträge</li>
+      <li>Notizen und Checklisten</li>
+      <li>Einkaufslisten, Vorratsdaten, Wochenplanungen und Rezepte</li>
+      <li>Einträge im Lifaro Tresor, soweit Sie entsprechende Funktionen nutzen</li>
+      <li>generierte Benutzernamen oder Passwörter, soweit diese von Ihnen gespeichert oder weiterverwendet werden</li>
+      <li>App-Einstellungen und Darstellungsoptionen</li>
+      <li>optional Bilddateien, etwa Rezeptbilder</li>
+      <li>von Ihnen ausgewählte Bilder oder Dateien, etwa zum Hinzufügen oder Auslesen von Rezeptinformationen</li>
+      </ul>
+      <p>Viele Inhalte werden zunächst lokal auf Ihrem Gerät verarbeitet. Eine Übertragung in die Cloud erfolgt nur, wenn Sie entsprechende Cloud-, Family-, Backup- oder Synchronisierungsfunktionen verwenden.</p>
+      <p>Rein lokal gespeicherte Inhalte werden grundsätzlich nicht an Lifaro oder Dritte übertragen, solange Sie keine Cloud-, Family-, Backup- oder Synchronisierungsfunktionen verwenden.</p>
+      <h3>4.2 Gesundheits- und Zyklusdaten</h3>
+      <p>Wenn Sie entsprechende Funktionen der App verwenden, können Gesundheits- und Zyklusdaten verarbeitet werden, etwa Einträge im Gesundheitstagebuch, Beschwerden, Medikamente, Zyklusinformationen oder ähnliche sensible Angaben.</p>
+      <p>Diese Daten werden ausschließlich zur Bereitstellung der von Ihnen aktiv genutzten Funktionen verarbeitet. Eine Übertragung dieser Daten erfolgt nur, soweit Sie entsprechende Cloud-, Backup- oder Synchronisierungsfunktionen aktiv nutzen und die jeweilige Funktion dies erfordert.</p>
+      <h3>4.3 Google-Anmeldung und Firebase Authentication</h3>
+      <p>Für bestimmte Funktionen kann eine Anmeldung mit einem Google-Konto verwendet werden. Dabei können insbesondere eine Nutzerkennung, die mit dem Google-Konto verknüpfte E-Mail-Adresse sowie technische Authentifizierungsdaten verarbeitet werden.</p>
+      <p>Die Anmeldung wird über Firebase Authentication bzw. Google-Dienste bereitgestellt. Eine Google-Anmeldung ist insbesondere für Cloud-, Family-, Backup- und Gerätewechsel-Funktionen erforderlich.</p>
+      <h3>4.4 Familien- und Cloudfunktionen</h3>
+      <p>Wenn Sie Familien- oder Cloudfunktionen verwenden, können von Ihnen freigegebene Inhalte über Firebase Cloud Firestore synchronisiert und gemeinsam nutzbar gemacht werden. Je nach Nutzung betrifft dies insbesondere:</p>
+      <ul>
+      <li>Haushalts- oder Familienzuordnungen</li>
+      <li>Einladungs- und Rolleninformationen innerhalb einer Familie</li>
+      <li>freigegebene Schichten, Termine und benutzerdefinierte Kalendereinträge</li>
+      <li>gemeinsam genutzte Einkaufslisten, Wochenplanungen, Vorratsdaten und Rezepte</li>
+      <li>Kurznamen und Farbauswahl innerhalb der Familienfunktion</li>
+      </ul>
+      <p>Family-Daten sind für Mitglieder derselben Familie sichtbar, soweit dies für die jeweilige Funktion erforderlich ist.</p>
+      <p>Inhalte werden nur dann innerhalb einer Familie geteilt, wenn Sie die entsprechenden Family- oder Freigabefunktionen verwenden.</p>
+      <h3>4.5 Backup-Funktion</h3>
+      <p>Wenn Sie die Backup-Funktion nutzen, können lokal gespeicherte App-Daten zu Sicherungszwecken in Firebase Storage gespeichert und mit Ihrem Lifaro-Konto verknüpft werden.</p>
+      <p>Das Backup kann insbesondere lokal gespeicherte Kalenderdaten, Termine, Notizen, Rezepte, Einstellungen, Lifaro-Tresor-Daten und weitere lokal gespeicherte App-Inhalte enthalten. Family-Daten, die bereits über die Cloud synchronisiert werden, sind grundsätzlich nicht Teil des Geräte-Backups.</p>
+      <p>Die Backup-Funktion ist optional. Eine Speicherung von Backup-Daten in Firebase Storage erfolgt nur, wenn Sie die Backup-Funktion verwenden.</p>
+      <h3>4.6 Lifaro Tresor, Generator-Funktionen und Autofill</h3>
+      <p>Der Lifaro Tresor kann Funktionen zur Verwaltung oder Erstellung von Zugangsdaten anbieten, etwa Generatoren für Passwörter und Benutzernamen.</p>
+      <p>Generierte Passwörter und Benutzernamen werden grundsätzlich nur zur Bereitstellung der jeweiligen Funktion angezeigt oder verarbeitet. Eine weitergehende Speicherung erfolgt nur, soweit Sie dies selbst in der App veranlassen oder entsprechende Speicher-, Backup- oder Synchronisierungsfunktionen nutzen.</p>
+      <p>Tresor-Daten können besonders sensible Informationen enthalten. Bitte gehen Sie sorgfältig mit Zugangsdaten um und speichern Sie nur solche Informationen, die Sie bewusst in Lifaro verwalten möchten.</p>
+      <p>Soweit Tresor-Daten lokal genutzt werden, bleiben diese grundsätzlich auf Ihrem Gerät gespeichert. Eine Speicherung oder Übertragung im Rahmen der Backup-Funktion erfolgt nur, wenn Sie die Backup-Funktion nutzen.</p>
+      <p>Zusätzlich kann Lifaro eine Autofill-Funktion anbieten. Wenn Sie Lifaro als Autofill-Dienst auf Ihrem Gerät aktivieren, kann Lifaro bei geeigneten Anmeldefeldern in anderen Apps oder Websites Vorschläge zum Ausfüllen von Benutzernamen und Passwörtern anzeigen. Die Autofill-Funktion wird nur verwendet, wenn Sie Lifaro als Autofill-Dienst aktivieren und einen Tresor-Eintrag zum Ausfüllen auswählen.</p>
+      <p>Dabei werden die in Lifaro gespeicherten Zugangsdaten lokal auf Ihrem Gerät verarbeitet und an die jeweilige App oder Website übergeben, in der Sie das Ausfüllen aktiv auslösen. Eine Übertragung der Autofill-Daten an Lifaro-Server erfolgt dabei nicht. Eine Speicherung oder Übertragung von Tresor-Daten im Rahmen der Backup-Funktion erfolgt nur, wenn Sie die Backup-Funktion verwenden.</p>
+      <h3>4.7 Rezeptbilder und Bilderkennung</h3>
+      <p>Die App kann Funktionen anbieten, mit denen Sie Bilder von Ihrem Gerät auswählen oder hinzufügen können, etwa um Rezeptbilder zu speichern oder Rezeptinformationen aus einem Bild zu übernehmen.</p>
+      <p>Die ausgewählten Bilder werden nur zur Bereitstellung der jeweiligen Funktion verarbeitet. Eine Verarbeitung erfolgt grundsätzlich nur für Bilder oder Dateien, die Sie selbst in der App auswählen.</p>
+      <p>Soweit aus einem Bild Rezeptinformationen erkannt werden, werden die erkannten Inhalte nur zur Erstellung oder Bearbeitung des jeweiligen Rezepts verwendet. Eine Speicherung erfolgt nur, wenn Sie das Rezept oder die entsprechenden Inhalte in der App speichern.</p>
+      <p>Eine Übertragung von Bildern oder daraus erkannten Rezeptinformationen erfolgt nur, wenn dies für die jeweilige Funktion erforderlich ist oder wenn Sie Cloud-, Family-, Backup- oder Synchronisierungsfunktionen nutzen.</p>
+      <h3>4.8 Sicherheit und technische Schutzmaßnahmen</h3>
+      <p>Lifaro setzt angemessene technische und organisatorische Maßnahmen ein, um personenbezogene Daten vor Verlust, Missbrauch und unbefugtem Zugriff zu schützen. Bei der Nutzung von Google-, Firebase- und Google-Play-Diensten gelten zusätzlich die Sicherheitsmaßnahmen der jeweiligen Anbieter.</p>
+      <p>Bitte beachten Sie, dass insbesondere Zugangsdaten, Gesundheitsdaten und andere sensible Inhalte besonders schützenswert sind. Bewahren Sie Ihr Gerät sicher auf, verwenden Sie geeignete Gerätesperren und speichern Sie sensible Informationen nur, wenn Sie dies wirklich möchten.</p>
+      <h3>4.9 Premium und In-App-Käufe</h3>
+      <p>Lifaro kann kostenpflichtige Premium-Funktionen anbieten. Die Abwicklung von Käufen und Abonnements erfolgt über Google Play. Dabei können kauf- und abrechnungsbezogene Daten durch Google verarbeitet werden.</p>
+      <p>Lifaro erhält keine vollständigen Zahlungsdaten wie Kreditkarten- oder Kontodaten.</p>
+      <h2>5. Zwecke der Verarbeitung</h2>
+      <p>Die Verarbeitung erfolgt insbesondere zu folgenden Zwecken:</p>
+      <ul>
+      <li>Bereitstellung der Website</li>
+      <li>Bereitstellung und Funktionsfähigkeit der App</li>
+      <li>Speicherung und Verwaltung Ihrer Inhalte</li>
+      <li>Bereitstellung von Kalender-, Einkaufs-, Notiz-, Gesundheits- und Tresor-Funktionen</li>
+      <li>Bereitstellung von Generator-Funktionen für Passwörter und Benutzernamen</li>
+      <li>Bereitstellung der Autofill-Funktion zum lokalen Ausfüllen von Benutzernamen und Passwörtern in anderen Apps oder Websites</li>
+      <li>Hinzufügen, Speichern und Verwalten von Rezeptbildern</li>
+      <li>Auslesen und Übernehmen von Rezeptinformationen aus von Ihnen ausgewählten Bildern oder Dateien</li>
+      <li>Synchronisierung freigegebener Inhalte</li>
+      <li>Durchführung von Anmelde- und Backup-Funktionen</li>
+      <li>Bearbeitung von Support- und Kontaktanfragen</li>
+      <li>Abwicklung von Premium-Funktionen und In-App-Käufen über Google Play</li>
+      </ul>
+      <h2>6. Rechtsgrundlagen</h2>
+      <p>Soweit personenbezogene Daten zur Bereitstellung der Website oder App-Funktionen verarbeitet werden, erfolgt dies auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, soweit die Verarbeitung zur Durchführung nutzerbezogener Funktionen erforderlich ist, oder auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO, soweit ein berechtigtes Interesse an einem sicheren und funktionsfähigen Angebot besteht.</p>
+      <p>Soweit Gesundheits- oder Zyklusdaten verarbeitet werden, erfolgt dies ausschließlich im Rahmen der von Ihnen aktiv genutzten Funktionen und auf Basis Ihrer freiwilligen Eingaben. Soweit hierfür eine ausdrückliche Einwilligung erforderlich ist, erfolgt die Verarbeitung auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO in Verbindung mit Art. 9 Abs. 2 lit. a DSGVO.</p>
+      <h2>7. Empfänger oder Kategorien von Empfängern</h2>
+      <p>Eine Weitergabe personenbezogener Daten erfolgt nur, soweit dies für die genannten Funktionen erforderlich ist. Je nach Nutzung können dabei insbesondere technische Dienstleister bzw. Plattformen eingebunden sein, etwa:</p>
+      <ul>
+      <li>GitHub Pages für die Website</li>
+      <li>IONOS für Domain- und DNS-Verwaltung</li>
+      <li>Google-Dienste im Rahmen der Google-Anmeldung</li>
+      <li>Firebase Authentication für die Anmeldung</li>
+      <li>Firebase Cloud Firestore für Cloud-, Family- und Synchronisierungsfunktionen</li>
+      <li>Firebase Storage für die Backup-Funktion</li>
+      <li>Google Play Billing für Premium-Abos und In-App-Käufe</li>
+      </ul>
+      <p>Rein lokal genutzte Inhalte werden grundsätzlich nicht an Dritte weitergegeben, solange Sie keine Cloud-, Family-, Backup- oder Synchronisierungsfunktionen verwenden.</p>
+      <p>Bei Nutzung der Autofill-Funktion werden die von Ihnen ausgewählten Zugangsdaten lokal an die jeweilige App oder Website übergeben, in der Sie das Ausfüllen aktiv auslösen.</p>
+      <h2>8. Speicherdauer</h2>
+      <p>Personenbezogene Daten werden nur so lange gespeichert, wie dies für die jeweiligen Zwecke erforderlich ist oder bis Sie gespeicherte Inhalte selbst löschen.</p>
+      <p>Lokal gespeicherte App-Daten bleiben grundsätzlich auf Ihrem Gerät gespeichert, bis Sie diese in der App oder durch Deinstallation der App entfernen.</p>
+      <p>Cloud- und Backup-Daten bleiben grundsätzlich so lange gespeichert, wie Ihr Lifaro-Konto besteht oder bis Sie die entsprechenden Inhalte, Backups oder Ihr Konto löschen.</p>
+      <h2>9. Ihre Rechte</h2>
+      <p>Sie haben nach Maßgabe der DSGVO insbesondere folgende Rechte:</p>
+      <ul>
+      <li>Recht auf Auskunft</li>
+      <li>Recht auf Berichtigung</li>
+      <li>Recht auf Löschung</li>
+      <li>Recht auf Einschränkung der Verarbeitung</li>
+      <li>Recht auf Datenübertragbarkeit</li>
+      <li>Recht auf Widerspruch gegen die Verarbeitung</li>
+      <li>Recht auf Widerruf einer erteilten Einwilligung mit Wirkung für die Zukunft</li>
+      <li>Recht auf Beschwerde bei einer Datenschutzaufsichtsbehörde</li>
+      </ul>
+      <h2>10. Kontolöschung und Datenlöschung</h2>
+      <p>Nutzerinnen und Nutzer können ihr Lifaro-Konto und die damit verbundenen Daten direkt in der App löschen oder eine Löschung per E-Mail anfordern.</p>
+      <p>Die Kontolöschung ist in der App im Bereich Familie / Cloud unter Account über „Konto löschen“ erreichbar.</p>
+      <p>Bei der Löschung werden insbesondere das Lifaro-Konto, das Cloud-Profil, vorhandene Cloud-Backups, persönliche Cloud-Daten und Family-Verknüpfungen gelöscht, soweit keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</p>
+      <p>Lokal gespeicherte Daten auf Ihrem Gerät können zusätzlich durch Löschen der jeweiligen Inhalte in der App oder durch Deinstallation der App entfernt werden.</p>
+      <p>Wenn ein Nutzer Owner einer Familie mit weiteren Mitgliedern ist, muss die Familie vorher übertragen oder die anderen Mitglieder müssen entfernt werden. Ist der Owner das einzige Mitglied, kann die Familie im Rahmen der Kontolöschung gelöscht werden.</p>
+      <p>Eine genaue Anleitung dazu findest du hier: <a href="konto-loeschen.html">Konto löschen</a>.</p>
+      <h2>11. Kontakt zum Datenschutz</h2>
+      <p>Bei Fragen zur Verarbeitung personenbezogener Daten können Sie sich an folgende E-Mail-Adresse wenden:</p>
+      <p>tobiasinteractive@gmail.com</p>
+      <h2>12. Stand</h2>
+      <p class="muted">Stand dieser Datenschutzerklärung: Juni 2026</p>
+      </article>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>© 2026 Tobias Interactive · Kontakt: <a href="mailto:tobiasinteractive@gmail.com">tobiasinteractive@gmail.com</a></div>
+
+      <div class="footer-links">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+        <a href="konto-loeschen.html">Konto löschen</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
